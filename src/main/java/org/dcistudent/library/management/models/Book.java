@@ -24,7 +24,7 @@ public class Book {
     }
 
     public Boolean borrow(String name) {
-        if (this.getIsAvailable()) {
+        if (this.getIsAvailable() == true) {
             this.setIsAvailable(false);
             return true;
         }
@@ -33,7 +33,7 @@ public class Book {
     }
 
     public Boolean handBack(String name) {
-        if (!this.getIsAvailable()) {
+        if (this.getIsAvailable() == false) {
             this.setIsAvailable(true);
             return true;
         }

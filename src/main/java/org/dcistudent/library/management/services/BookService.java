@@ -1,11 +1,9 @@
 package org.dcistudent.library.management.services;
 
-import lombok.Getter;
 import org.dcistudent.library.management.models.Book;
 
 import java.util.*;
 
-@Getter
 public class BookService {
     private Scanner scanner;
     private List<Book> books;
