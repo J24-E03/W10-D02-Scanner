@@ -83,6 +83,7 @@ public class BookService {
         // no books available
         if (this.books.isEmpty() == true) {
             System.out.println("No books available. :(");
+            System.out.println();
             return false;
         }
 
@@ -106,6 +107,12 @@ public class BookService {
         System.out.println("Enter the author of the book you want to search:");
         String author = this.scanner.next();
 
+        if (author.isBlank() == true) {
+            System.out.println("Author cannot be empty. :(");
+            this.findBooksByAuthor();
+            return false;
+        }
+
         List<Book> books = this.books
                 .stream()
                 .filter(b -> b.getAuthor().toLowerCase().contains(author.toLowerCase()))
@@ -113,6 +120,7 @@ public class BookService {
 
         if (books.isEmpty() == true) {
             System.out.println("No books found. :(");
+            System.out.println();
             return false;
         }
 
@@ -136,6 +144,7 @@ public class BookService {
 
         if (books.isEmpty() == true) {
             System.out.println("No bestseller books found. :(");
+            System.out.println();
             return false;
         }
 
