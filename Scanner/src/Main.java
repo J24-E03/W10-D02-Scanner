@@ -12,6 +12,18 @@ public class Main {
 
 //        nextLine(): takes a string from the user
 
+
+//        teacher(scanner);
+
+        student(scanner);
+
+
+
+
+        scanner.close();
+    }
+
+    public static void teacher(Scanner scanner){
         System.out.println("Input your course: ");
 
         String myCourse = scanner.nextLine().trim();
@@ -44,9 +56,39 @@ public class Main {
         Teacher teacher1 = new Teacher(name,myCourse,age,isGerman);
 
         System.out.println("New teacher is " + teacher1);
-
-        scanner.close();
     }
+
+    public static void student(Scanner scanner){
+        System.out.println("Enter Student name: ");
+        String studentName = scanner.nextLine();
+
+        System.out.println("Enter student id");
+        int id = scanner.nextInt();
+
+        scanner.nextLine();
+
+        System.out.println("Enter Student Course");
+
+        String course = scanner.nextLine();
+
+        System.out.println("Enter city: ");
+
+        String city = scanner.nextLine();
+
+        System.out.println("Are you based in Europe(true/false)?");
+
+        boolean isEuropean = scanner.nextBoolean();
+
+        Student student1 = new Student(id,studentName,course,city,isEuropean);
+
+        student1.printStudentInfo();
+
+
+
+    }
+
+
+
 }
 
 
@@ -59,4 +101,5 @@ public class Main {
     5. BONUS: compare in the method the string for course case-insensitive (meaning "java" == "Java")
     6. BONUS 2: have the ids automatically increase with each new student without having to input the ids
 */
+
 
