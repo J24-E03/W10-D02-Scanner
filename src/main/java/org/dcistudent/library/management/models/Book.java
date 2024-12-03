@@ -4,10 +4,15 @@ import lombok.*;
 
 @Getter @Setter
 public class Book {
+    @NonNull
     private String title;
+    @NonNull
     private String author;
+    @NonNull
     private Integer pages;
+    @NonNull
     private Boolean isBestSeller = false;
+    @NonNull
     private Boolean isAvailable = true;
 
     public Book(String title, String author, Integer pages, Boolean isBestSeller, Boolean isAvailable) {
