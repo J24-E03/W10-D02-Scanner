@@ -54,7 +54,7 @@ public class Main {
                 return "The book " + title + "was not found in our records.";
             }
         }
-        return "The book \"" + title + "\" was not found in our records.";
+        return "The book" + title + " was not found in our records.";
     }
     public static void displayAllBooks() {
         for (Book book : books) {
@@ -141,7 +141,9 @@ public class Main {
                 else {
                     System.out.println("Invalid choice. Please try again.");
             }
+
         }
+
     }
 }
 
